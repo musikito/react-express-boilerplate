@@ -20,7 +20,7 @@ You can find smtp providers [here](https://github.com/discourse/discourse/blob/m
 # built-in password reset using email
 I added an end point for your users to reset their password if they need to
 
-# React-fronend
+# React-frontend
 the frontend use React and built with **react-router** by default. You can add your routes in the `/Main/Main.js` file 
 
 # to use 
