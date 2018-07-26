@@ -27,11 +27,9 @@ the frontend use React and built with **react-router** by default. You can add y
 1. simply clone the repo, add the smtp cords as described above inside `/server/routes/config.js`.
 ```sh
 cd server/ 
-npm install
-npm start
+npm install && npm start
 cd client/
-npm install
-npm start
+npm install && npm start
 ```
 Thats it! now your React front end run on `http://localhost:3000`. and your server run on `http://localhost:3010` 
 
