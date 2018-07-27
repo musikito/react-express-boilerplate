@@ -50,8 +50,10 @@ class Admin extends Component {
                 dateOfRegistration: new Date()
             })
             .then((res) => {
-                if (res.data.message == 'A user with the given username is already registered') {
-                    Swal('oops', 'this email already axist', 'error')
+                if (res.data.errors) { // check for errors
+                    if (res.data.errors.email) { // check for email exist error
+                        Swal('oops', 'this email already axist', 'error')
+                    }
                 } else {
                     this.setState({isHaveAccount:true}, () => {
                         Swal('hey!', 'thank you! please check your email for activating your account', 'success')
