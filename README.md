@@ -25,10 +25,10 @@ You can find smtp providers [here](https://github.com/discourse/discourse/blob/m
 I added an end point for your users to reset their password if they need to
 
 # React-frontend
-the frontend use React and built with **react-router** by default. You can add your routes in the `/Main/Main.js` file 
+the frontend use React and built with **react-router** by default. You can add your routes in the [Main.js](client/src/Screens/Main/Main.js) file 
 
 # to use 
-1. simply clone the repo, add the smtp cords as described above inside `/server/routes/config.js`.
+1. simply clone the repo, add the smtp cords as described above inside [config.js](./server/routes/config.js).
 ```sh
 cd server/ 
 npm install && npm start
