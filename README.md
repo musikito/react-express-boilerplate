@@ -1,6 +1,10 @@
 # Express-backend 
 this repo is a simple boilerplate for express application with basic features as:
 
+**This setup works with local instance of mongo only if you have mongo installed on your machine**
+if you dont have mongo installed you can follow [this](https://docs.mongodb.com/manual/administration/install-community/) instructions. then to start it simply run `sudo mongod` from the command line.
+
+
 # built-in Auth - using passport-mongoose 
 this boilerplate built with passport auth with mongo database: 
 simply add your login data in the config.js file and uncomment the necessary part from db/mongoos.js
