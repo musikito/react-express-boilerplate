@@ -4,7 +4,6 @@ import Home from '../Home/Home'
 import Admin from '../Admin/Admin'
 import AskResetPassword from '../Admin/AskResetPassword'
 import ResetPassword from '../Admin/ResetPassword'
-import Post from '../UserPage/Post'
 import '../../css/Main.css'
 
  const Main = () => {
