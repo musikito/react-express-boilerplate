@@ -33,6 +33,8 @@ npm install && npm start
 ```
 Thats it! now your React front end run on `http://localhost:3000`. and your server run on `http://localhost:3010` 
 
+**pull requests are welcome (:**
+
 
 
  
