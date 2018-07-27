@@ -138,12 +138,7 @@ class Admin extends Component {
                             <ButtonMU className='btn-signup' variant="contained" color="primary" onClick={this.Login}>Login</ButtonMU>
                             <ButtonMU className='btn-signup' variant="contained" color="primary" onClick={(e) => this.moveToSignup(e)}>I dont have account</ButtonMU>
                                 <br/>
-                            <Link 
-                                style={{textDecoration: 'none'}} 
-                                to={{
-                                    pathname:'/resetpassword'
-                                }}
-                                >
+                            <Link style={{textDecoration: 'none'}} to={{pathname:'/resetpassword'}}>
                                 <ButtonMU className='btn-signup' variant="outlined" color="primary" >forgot password?</ButtonMU>
                             </Link>
                         </div> 
@@ -155,10 +150,12 @@ class Admin extends Component {
                             <input className='admin-form' onChange={e => this.handleInputChange(e)} value={this.state.email} name="email"  type="text" placeholder="email" />
                             <input className='admin-form' onChange={e => this.handleInputChange(e)} value={this.state.password} name="password"  type="password"  placeholder="password" />
                             <br/>
-                            <div style={{display:'inline-block'}}>
                                 <ButtonMU className='btn-signup' variant="contained" color="primary" onClick={this.Signup}>Signup</ButtonMU>
                                 <ButtonMU className='btn-signup' variant="contained" color="primary" onClick={() => this.moveToSignup()}>I have account</ButtonMU>
-                            </div>
+                            <br/>
+                            <Link style={{textDecoration: 'none'}} to={{pathname:'/'}}>
+                                <ButtonMU className='btn-signup' variant="outlined" color="primary">Home</ButtonMU>
+                            </Link>
                         </div>  
                     </div>
                 }                  
