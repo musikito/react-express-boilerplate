@@ -5,7 +5,6 @@ import Admin from '../Admin/Admin'
 import AskResetPassword from '../Admin/AskResetPassword'
 import ResetPassword from '../Admin/ResetPassword'
 import Post from '../UserPage/Post'
-import UserPage from '../UserPage/UserPage'
 import '../../css/Main.css'
 
  const Main = () => {
