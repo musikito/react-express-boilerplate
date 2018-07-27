@@ -14,8 +14,6 @@ import '../../css/Main.css'
             <Route exact path='/admin' component={Admin}/>
             <Route exact path='/resetpassword/:token/:email' component={ResetPassword}/>
             <Route exact path='/resetpassword' component={AskResetPassword}/>
-            <Route exact path='/:user/:postId' component={Post}/>
-            <Route exact path='/:user' component={UserPage}/>
             <Route exact path='/' component={Home}/>
         </Switch>
 
