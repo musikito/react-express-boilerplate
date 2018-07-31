@@ -41,7 +41,7 @@ Thats it! now your React front end run on `http://localhost:3000`. and your serv
 * setting 
 `server` inside [config.js](./server/routes/config.js) to numeric address (i.e 10.0.0.11) will couse the confirmation email not to be sent. make sure to use alphabetical address
 
-# example [here](https://express-react-boilerplate.herokuapp.com/)
+# DEMO [here](https://express-react-boilerplate.herokuapp.com/)
 email: demo@demo.com
 password: demo
 
