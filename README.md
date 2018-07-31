@@ -37,6 +37,9 @@ npm install && npm start
 ```
 Thats it! now your React front end run on `http://localhost:3000`. and your server run on `http://localhost:3010` 
 
+# Known issues
+⋅⋅* setting ```js server``` inside [config.js](./server/routes/config.js) to numeric address (i.e 10.0.0.11) will couse the confirmation email not to be sent. make sure to use alphabetical address
+
 **pull requests are welcome (:**
 
 
