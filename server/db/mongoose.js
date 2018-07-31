@@ -11,8 +11,7 @@ mongoose.connect(url, { useNewUrlParser: true }, console.log('connected to mongo
 
 
 //@@@@@@@@@@@@@ if you dont use local host @@@@@@@@@@@@@@@@@
-
-// mongoose.connect(mongoUrl, {
+// mongoose.connect(config.mongoUrl, {
 //     auth: {
 //       user: config.mongoUsername,
 //       password: config.mongoPw
@@ -20,7 +19,6 @@ mongoose.connect(url, { useNewUrlParser: true }, console.log('connected to mongo
 //   })
 //   .then(() => console.log('connection successful'))
 //   .catch((err) => console.error(err));
-
 //@@@@@@@@@@@@@ if you dont use local host @@@@@@@@@@@@@@@@@
 
 mongoose.Promise = global.Promise;
