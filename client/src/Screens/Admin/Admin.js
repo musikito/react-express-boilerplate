@@ -19,7 +19,7 @@ class Admin extends Component {
             console.log('this username', this.state.username)
         }
     }
-    
+
     handleInputChange = (e) => {
 
         const target = e.target;
@@ -50,11 +50,15 @@ class Admin extends Component {
                 dateOfRegistration: new Date()
             })
             .then((res) => {
+                console.log('this res on signup', res.data)
                 if (res.data.errors) { // check for errors
                     if (res.data.errors.email) { // check for email exist error
                         Swal('oops', 'this email already axist', 'error')
                     }
-                } else {
+                } else if (res.data.name == 'UserExistsError') { // check if email exist from Passport 
+                    Swal('oops', 'this email already axist', 'error')
+                }  
+                else {
                     this.setState({isHaveAccount:true}, () => {
                         Swal('hey!', 'thank you! please check your email for activating your account', 'success')
                     })
