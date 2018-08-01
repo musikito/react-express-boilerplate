@@ -18,6 +18,7 @@ var config  = require('./routes/config')
 var index = require("./routes/index")
 var resetPasswordHandler = require('./routes/resetPasswordHandler')
 var resetPasswordEmail = require('./routes/resetPasswordEmail')
+var protected = require('./routes/protected')
 
 
 // passport imports
@@ -61,6 +62,7 @@ app.use('/logout', logout)
 app.use('/activate', activate)
 app.use('/resetpasswordemail', resetPasswordEmail)
 app.use('/resetpasswordhandler', resetPasswordHandler)
+app.use('/protected', protected)
 
 // passport initialize
 var {User} = require('./db/models/UserSchema');

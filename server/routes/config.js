@@ -1,6 +1,6 @@
 let config = {
-	cookieParserSecret: "<SECRET>", // secret for cookie parser
-    JWTsecret: "<SECRET>", // secret for JWT 
+	cookieParserSecret: process.envcookieParserSecret || "<SECRET>", // secret for cookie parser
+    JWTsecret: process.env.JWTsecret || "<SECRET>", // secret for JWT 
     nodemailerEmail: process.env.nodemailerEmail || "smtp email", // your email client
     nodemailerPw: process.env.nodemailerPw ||"<smtp login pw>", // your email password client
     smtp:"smtp.domain.com", // i.e 'smtp.domain.com'

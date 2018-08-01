@@ -7,6 +7,10 @@ let config = require('../routes/config')
 //@@@@@@@@@@@@@ if you use local host @@@@@@@@@@@@@@@@@
 var url = "mongodb://localhost:27017/db";
 mongoose.connect(url, { useNewUrlParser: true }, console.log('connected to mongo'));
+//@@@@@@@@@@@@@ if you use local host @@@@@@@@@@@@@@@@@
+
+
+
 
 
 

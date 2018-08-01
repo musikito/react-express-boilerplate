@@ -8,6 +8,7 @@ var passport = require('passport');
 var config = require('./config')
 
 router.post('/', (req, res) => {
+    console.log('env var', process.env.server)
     console.log(config)
     var token = jwt.sign({ email: req.body.email }, config.JWTsecret, {}); // assigning token which be userd to activate the signed account
 

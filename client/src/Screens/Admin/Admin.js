@@ -13,7 +13,8 @@ class Admin extends Component {
         this.state = {
             password:'',
             email:'',
-            username: JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')).username : ''
+            username: JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')).username : '', // username
+            token: JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')).token : '', // user access token
         }
         if (config.__DEGUGGING__) {
             console.log('this username', this.state.username)
@@ -84,9 +85,13 @@ class Admin extends Component {
                 }
                 if (res.data.user) {
                     const user = res.data.user
-                        this.setState({username:user.username} , () => {
+                        this.setState({
+                            username:user.username,
+                            token:res.data.token
+                        } , () => {
                             localStorage.setItem('user', JSON.stringify({
-                                username:user.username 
+                                username:user.username,
+                                token:res.data.token 
                             }));
                         })
                     }
@@ -108,31 +113,49 @@ class Admin extends Component {
         })
         .then((res) => {
             this.setState({username:''}, () => {
-                localStorage.clear();
-                window.location.reload();
+                localStorage.clear(); // clearing the local storage
+                window.location.reload(); // refreshing the page with the new local storage
             })
             
         })
         .catch(e => console.log('logout', e))
     }
 
+    protectedRoute = () => {
+        axios.post(`${config.backEndServer}/protected`, {
+            token:this.state.token // passing the token to access the route
+        })
+        .then(() => {
+            Swal('yey', 'awesome! I see you signed in(:', 'success') // show if the token is right
+        })
+        .catch((e) => {
+            if (e) {
+                Swal('oops' , 'login to see it(:' , 'error') // show if token is wrong or there is no token passed
+            }
+        })
+    }
+
 
   render() {
       const username = this.state.username
+      const token = this.state.token
 
     return (
         <div className=''>
             {
-                username ? 
+                token ? // checking if there is a token
+
                 <div className='admin-signup-section container-signup container'>
                     <h1>Admin</h1> 
                     <ButtonMU className='btn-signup' variant="contained" color="primary" onClick={this.Logout}>Logout</ButtonMU>
+                    <br/>
+                    <ButtonMU className='btn-signup' variant="contained" color="primary" onClick={this.protectedRoute}>Protected route (:</ButtonMU>
                 </div>
 
                 :
                 <div className='admin-signup-section container-signup container'>
                 {
-                    this.state.isHaveAccount ? 
+                    this.state.isHaveAccount ? // checking if the user have account and render the login or signup based on that
                     <div>
                         <h3>Login</h3>
                         <div>
@@ -145,6 +168,7 @@ class Admin extends Component {
                             <Link style={{textDecoration: 'none'}} to={{pathname:'/resetpassword'}}>
                                 <ButtonMU className='btn-signup' variant="outlined" color="primary" >forgot password?</ButtonMU>
                             </Link>
+                            <ButtonMU className='btn-signup' variant="contained" color="primary" onClick={this.protectedRoute}>Protected route (:</ButtonMU>
                         </div> 
                     </div>              
                     :   
@@ -160,6 +184,7 @@ class Admin extends Component {
                             <Link style={{textDecoration: 'none'}} to={{pathname:'/'}}>
                                 <ButtonMU className='btn-signup' variant="outlined" color="primary">Home</ButtonMU>
                             </Link>
+                            <ButtonMU className='btn-signup' variant="contained" color="primary" onClick={this.protectedRoute}>Protected route (:</ButtonMU>
                         </div>  
                     </div>
                 }                  
