@@ -71,7 +71,7 @@ the frontend use React and built with **react-router** by default. You can add y
 * simply clone the repo, add the smtp cords as described above inside [config.js](./server/routes/config.js).
 * make sure to uncomment the method you want to connet with to mongo, you can do it in [mongoose.js](./server/db/mongoose.js)
 
-**to user locally uncomment this:**
+**to use locally uncomment this:**
 ```js
 var url = "mongodb://localhost:27017/db";
 mongoose.connect(url, { useNewUrlParser: true }, console.log('connected to mongo'));
