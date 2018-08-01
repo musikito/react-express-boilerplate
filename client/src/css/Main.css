@@ -7,6 +7,10 @@ input[type="text"] {
     -webkit-appearance: none;
 }
 
+input[type="password"] {
+    -webkit-appearance: none;
+}
+
 .form-container {
     flex:1;
     width: 100%;
