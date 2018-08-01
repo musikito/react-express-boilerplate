@@ -1,6 +1,7 @@
 body,
 html {
-    margin:0!important
+    margin:0!important;
+    background-color: #F9FBFD!important;
 }
 
 input[type="text"] {
