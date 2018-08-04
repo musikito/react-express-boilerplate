@@ -53,7 +53,7 @@ app.use(session());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors())
-// app.use(ddos.express); // couse 500 error BUG
+app.use(ddos.express); // couse 500 error BUG
 
 app.use('/', index)
 app.use('/signup', signup)

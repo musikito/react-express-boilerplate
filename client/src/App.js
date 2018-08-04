@@ -20,7 +20,7 @@ class App extends Component {
             <a className="github-button" href="https://github.com/obiwankenoobi/react-express-boilerplate" data-icon="octicon-star" data-show-count="true" aria-label="Star obiwankenoobi/react-express-boilerplate on GitHub">Star</a>      
           </div>
           <div>
-            <a class="github-button" href="https://github.com/obiwankenoobi" aria-label="Follow @obiwankenoobi on GitHub">Follow @obiwankenoobi</a>
+            <a className="github-button" href="https://github.com/obiwankenoobi" aria-label="Follow @obiwankenoobi on GitHub">Follow @obiwankenoobi</a>
           </div>
         </div>
 
