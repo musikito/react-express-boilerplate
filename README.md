@@ -69,26 +69,11 @@ the frontend use React and built with **react-router** by default. You can add y
 
 # to use 
 * simply clone the repo, add the smtp cords as described above inside [config.js](./server/routes/config.js).
-* make sure to uncomment the method you want to connet with to mongo, you can do it in [mongoose.js](./server/db/mongoose.js)
 
-**to use locally uncomment this:**
-```js
-var url = "mongodb://localhost:27017/db";
-mongoose.connect(url, { useNewUrlParser: true }, console.log('connected to mongo'));
-```
 
-**to use with your remote server uncomment this**
-```js
-mongoose.connect(config.mongoUrl, {
-    auth: {
-      user: config.mongoUsername,
-      password: config.mongoPw
-    }
-  })
-  .then(() => console.log('connection successful'))
-  .catch((err) => console.error(err));
-```
-**dont forget to update the username and the password to your db in [config.js](./server/routes/config.js)**
+
+
+**to use with your remote server dont forget to update the username and the password to your db in [config.js](./server/routes/config.js)**
 
 * then:
 ```sh
