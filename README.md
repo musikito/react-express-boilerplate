@@ -30,12 +30,8 @@ then you can use the token to gain access to functions and routes.
 
 
 
-
-here you can see the backend in action [protected route](./server/routes/protected.js) that you can simply duplicate in any route toy want
-
-
 # React-frontend
-the frontend use React and built with **react-router** by default. You can add your routes in the [Main.js](client/src/Screens/Main/Main.js) file 
+the frontend use React and built with **react-router** by default. You can add your routes in the [App.js](client/src/App.js) file 
 
 # to use 
 * simply clone the repo, add the smtp cords as described above inside [.env](./server/.env).
