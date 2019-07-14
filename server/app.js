@@ -8,6 +8,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 console.log("dotenv", dotenv);
+console.log("secret ", process.env.cookieParserSecret);
 // anti ddos
 const RateLimit = require("express-rate-limit");
 const auth = require("./api/auth");
